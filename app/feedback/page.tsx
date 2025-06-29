@@ -280,7 +280,7 @@ export default function FeedbackPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-[#9ca3af] hover:text-[#a78bfa] transition-colors flex items-center gap-2 mx-auto"
+                className="text-[#9ca3af] hover:text-[#a78bfa] cursor-pointer transition-colors flex items-center gap-2 mx-auto"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Home
