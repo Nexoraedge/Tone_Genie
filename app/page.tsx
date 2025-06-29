@@ -90,9 +90,9 @@ export default function LandingPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              Write Smarter.{" "}
+              Write Better.{" "}
               <span className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] bg-clip-text text-transparent">
-                Instantly.
+                Sound Smarter
               </span>
             </motion.h1>
 
@@ -102,8 +102,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-[#9ca3af] mb-8 max-w-2xl"
             >
-              AI-powered Chrome extension to rewrite any text in your chosen tone — professional, poetic, or
-              playful.
+             Instantly enhance your text with AI-powered tone rewriting — from emails to gig descriptions, ToneGenie does it all.
             </motion.p>
 
             <motion.div
@@ -131,18 +130,25 @@ export default function LandingPage() {
               </motion.button>
             </motion.div>
 
+            <div className="bullets pt-4">
+              <ul className="space-y-2">
+                <li className=" text-[#e8d9f9] ">✅ Works on any website</li>
+                <li className="text-[#e8d9f9]">✅ No signup required</li>
+              </ul>
+            </div>
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-[#8c8c8f]"
             >
-              <div className="flex items-center gap-1">
+              {/* <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
-              </div>
-              <span>4.9/5 from 1,200+ users</span>
+              </div> */}
+              <span>💬 Your feedback shapes ToneGenie — <Link className="text-[#e8d9f9]" href="/feedback">rate now</Link> or <Link className="text-[#e8d9f9]" href="/feedback" >Leave a Review</Link></span>
             </motion.div>
           </motion.div>
 
@@ -220,12 +226,13 @@ export default function LandingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              How It{" "}
-              <span className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] bg-clip-text text-transparent">
-                Works
+              How{" "}
+              <span className="bg-gradient-to-r from-[#c693f0] via-[#9029e4] to-[#baa7f1] bg-clip-text text-transparent">
+              ToneGenie{" "}
               </span>
+              works
             </h2>
-            <p className="text-xl text-[#9ca3af] max-w-2xl mx-auto">Transform your writing in three simple steps</p>
+            <p className="text-xl text-[#9ca3af] max-w-2xl mx-auto">Enhancing your text is as easy as 1-2-3.</p>
           </motion.div>
 
           <motion.div
@@ -264,7 +271,7 @@ export default function LandingPage() {
             className="mb-12"
           >
             <h2 className="text-4xl font-bold mb-6">Lightning-Fast Shortcuts</h2>
-            <p className="text-xl text-[#9ca3af]">Master these two shortcuts and transform your writing speed</p>
+            <p className="text-xl text-[#9ca3af]">Master these shortcuts to save hours on writing.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -313,10 +320,11 @@ export default function LandingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Powerful{" "}
+            
               <span className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] bg-clip-text text-transparent">
-                Features
+              AI-Powered{" "} 
               </span>
+              Tools for Every Writer
             </h2>
             <p className="text-xl text-[#9ca3af] max-w-2xl mx-auto">
               Everything you need to write better, faster, and smarter
@@ -365,7 +373,7 @@ export default function LandingPage() {
               </span>
             </h2>
             <p className="text-xl text-[#9ca3af] max-w-2xl mx-auto">
-              Whether you're a professional or student, ToneGenie adapts to your needs
+            Whether you're writing your next pitch or love letter, ToneGenie adapts to your tone.
             </p>
           </motion.div>
 
@@ -454,6 +462,12 @@ export default function LandingPage() {
               />
             ))}
           </div>
+        </div>
+        <div className="mt-10 flex flex-col items-center justify-center">
+       <h3 className="text-2xl font-semibold">💡 Tried ToneGenie?</h3>
+       <p className="text-base text-[#9ca3af]">
+        <Link href={"/feedback"} className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] bg-clip-text text-transparent">Leave your review </Link>
+         and get featured here!</p>
         </div>
       </section>
 

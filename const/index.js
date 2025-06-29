@@ -1,22 +1,22 @@
 import { MousePointer , Keyboard ,CheckCircle,Wand2,Users,Globe, Sparkles, Github, X, Linkedin, Mail } from "lucide-react"
 export const testimonials = [
   {
-    name: "Sarah Chen",
+    name: "Hardik Jain",
     role: "Content Creator",
-    content: "ToneGenie transformed my writing workflow. I can switch from casual to professional tone instantly!",
-    rating: 5,
+    content: "This is not an actual rating....Rate us and provide feedback so that we can shape ToneGinie perfectly.",
+    rating: 4,
   },
   {
-    name: "Marcus Rodriguez",
+    name: "DevDhoni-ai",
     role: "Freelance Writer",
-    content: "The keyboard shortcuts are a game-changer. No more switching between tabs or apps.",
+    content: "This is not an actual rating....Rate us and provide feedback so that we can shape ToneGinie perfectly.",
     rating: 5,
   },
   {
-    name: "Emily Watson",
-    role: "Marketing Manager",
-    content: "Perfect for crafting emails that hit the right tone every time. Saves me hours of editing.",
-    rating: 5,
+    name: "Hardik Jain",
+    role: "Student",
+    content: "This is not an actual rating....Rate us and provide feedback so that we can shape ToneGinie perfectly.",
+    rating: 4,
   },
 ]
 
@@ -41,22 +41,22 @@ export const icons = [
               {
                 icon: CheckCircle,
                 title: "Grammar + Style Fixer",
-                description: "Perfect grammar and enhanced readability in seconds",
+                description: "Corrects grammar, refines tone, and boosts clarity.",
               },
               {
                 icon: Wand2,
                 title: "Custom Prompt Improviser",
-                description: "Tailor your writing with specific instructions and context",
+                description: "Type anything like 'make this persuasive + witty' and let AI do the rest.",
               },
               {
                 icon: Users,
                 title: "Human-like Tone Output",
-                description: "Natural, authentic writing that sounds genuinely human",
+                description: "Polished, fluid, and natural-sounding responses.",
               },
               {
                 icon: Globe,
                 title: "Works on Any Website",
-                description: "Gmail, Fiverr, social media, documents - everywhere you write",
+                description: "Fiverr, Gmail, social DMs, LinkedIn — anywhere you write.",
               },
             ]
 export const forwhom = [
@@ -76,7 +76,7 @@ export const data = [
     third:"G",
     smallD:"Quick Enhancement 🚀",
     extra:"Instantly improve grammer , style , tone and clarity",
-    initial:50
+    initial:-50
   },
   {
     first:"CTRL",
@@ -84,7 +84,7 @@ export const data = [
     third:"O",
     smallD:"Custom Tone ✒️",
     extra:"Choose specific tone, style preferences and provide context.",
-initial:-50
+initial:50
   },
   
   {
@@ -93,7 +93,7 @@ initial:-50
     third:"H",
     smallD:"From Scratch 📜",
     extra:"Write the content you want with prompt and provided data",
-    initial:50
+    initial:-50
   },
   {
     first:"CTRL",
@@ -101,7 +101,7 @@ initial:-50
     third:"A",
     smallD:"Extension 🧩",
     extra:"From here you can go the extension , cheeck out our website and other features",
-    initial:-50
+    initial:50
   }
 ]
 export const extralinks = [
@@ -110,11 +110,11 @@ export const extralinks = [
     text:"Feedback"
   },
   {
-    href:"/",
+    href:"/privacy",
     text:"Privacy Policy"
   },
   {
-    href:"/",
+    href:"/terms",
     text:"Terms"
   },
   {

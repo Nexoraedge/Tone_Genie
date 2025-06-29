@@ -4,6 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
   .flex-center {
     @apply flex items-center justify-center;
   }

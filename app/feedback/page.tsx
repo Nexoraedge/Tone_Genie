@@ -61,7 +61,7 @@ export default function FeedbackPage() {
             <CheckCircle className="w-10 h-10 [#f3f4f6]" />
           </motion.div>
 
-          <h1 className="text-3xl font-bold mb-4">Thank You!</h1>
+          <h1 className="text-3xl font-bold mb-4">Thank You!🎉</h1>
           <p className="text-[#9ca3af] mb-8">
             Your feedback has been submitted successfully. We appreciate you taking the time to help us improve
             ToneGenie!
@@ -102,8 +102,8 @@ export default function FeedbackPage() {
           >
             <div className="bg-gradient-to-r from-[#a78bfa] to-[#9029e4] p-1 rounded-2xl mb-8 inline-block">
               <div className="bg-[#18181b] rounded-xl px-8 py-6">
-                <h1 className="text-4xl font-bold mb-2">Help Us Improve ToneGenie</h1>
-                <p className="text-[#9ca3af]">Your feedback shapes the future of AI-powered writing</p>
+                <h1 className="text-4xl font-bold mb-2">✨ We’d Love Your Feedback</h1>
+                <p className="text-[#9ca3af]">Help shape the future of smart, AI-powered writing with your ideas & experiences.</p>
               </div>
             </div>
           </motion.div>
@@ -119,7 +119,7 @@ export default function FeedbackPage() {
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name (optional)
+                👤Your Name (optional)
                 </label>
                 <input
                   type="text"
@@ -135,7 +135,7 @@ export default function FeedbackPage() {
               {/* What do you love */}
               <div>
                 <label htmlFor="love" className="block text-sm font-medium mb-2">
-                  What do you love about ToneGenie? ✨
+                ❤️ What’s your favorite thing about ToneGenie?
                 </label>
                 <textarea
                   id="love"
@@ -151,7 +151,7 @@ export default function FeedbackPage() {
               {/* What to improve */}
               <div>
                 <label htmlFor="improve" className="block text-sm font-medium mb-2">
-                  What should we improve? 🔧
+                🛠️ Any bugs or suggestions for improvement?
                 </label>
                 <textarea
                   id="improve"
@@ -167,7 +167,7 @@ export default function FeedbackPage() {
               {/* Feature requests */}
               <div>
                 <label htmlFor="features" className="block text-sm font-medium mb-2">
-                  Any feature you want next? 🚀
+                🚀 What new features would you love to see?
                 </label>
                 <textarea
                   id="features"
@@ -182,7 +182,7 @@ export default function FeedbackPage() {
 
               {/* Star Rating */}
               <div>
-                <label className="block text-sm font-medium mb-3">Rate your experience</label>
+                <label className="block text-sm font-medium mb-3">🌟 Rate your experience using ToneGenie</label>
                 <div className="flex gap-2">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <motion.button
@@ -214,12 +214,12 @@ export default function FeedbackPage() {
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Submitting...
+                    Sharing Thoughts...
                   </>
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
-                    Submit Feedback
+                    ✅ Share My Thoughts
                   </>
                 )}
               </motion.button>
@@ -233,21 +233,21 @@ export default function FeedbackPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-center"
           >
-            <p className="text-[#9ca3af] mb-4">Need immediate help?</p>
+            <p className="text-[#9ca3af] mb-4">Need help right now?</p>
             <div className="flex justify-center gap-4">
               <a
                 href="hardikjain2030@gmial.com"
                 className="flex items-center gap-2 px-4 py-2 bg-[#232336] border border-[#27272a] rounded-lg hover:bg-[#a78bfa]/20 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                Email Support
+               📨 Email Support
               </a>
               <a
                 href="https://github.com/Nexoraedge"
                 className="flex items-center gap-2 px-4 py-2 bg-[#232336] border border-[#27272a] rounded-lg hover:bg-[#a78bfa]/20 transition-colors"
               >
                 <Github className="w-4 h-4" />
-                GitHub Issues
+                🐛GitHub Issues
               </a>
             </div>
           </motion.div>
