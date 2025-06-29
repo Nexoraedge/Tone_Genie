@@ -114,11 +114,13 @@ export default function LandingPage() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(167, 139, 250, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r cursor-pointer from-[#9029e4] to-[#a78bfa] px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r cursor-pointer from-[#9029e4] to-[#a78bfa]  rounded-xl font-semibold text-lg  shadow-lg hover:shadow-xl transition-all duration-300"
               >
+                <Link href="https://github.com/Nexoraedge/Text_Enhancer" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
                 <Sparkles className="w-5 h-5" />
-                Add to Chrome
+                Try Now !!
                 <ArrowRight className="w-5 h-5" />
+                </Link>
               </motion.button>
 
               <motion.button
@@ -169,14 +171,14 @@ export default function LandingPage() {
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-br from-[#232336] to-[#131316] rounded-2xl p-8 shadow-2xl border border-[#27272a]"
+                className="bg-gradient-to-br from-[#232336] to-[#131316] rounded-2xl p-8 shadow-[0_0_14px_#9029e4] border border-[#27272a]"
               >
                 <Image
-                  src="/popup-mockup.png"
+                  src="/ss.png"
                   alt="ToneGenie AI Popup Interface"
-                  width={400}
+                  width={500}
                   height={500}
-                  className="w-[88%] h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg"
                 />
               </motion.div>
 
@@ -493,11 +495,12 @@ export default function LandingPage() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(167, 139, 250, 0.4)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] cursor-pointer px-12 py-4 rounded-xl font-bold text-xl flex items-center justify-center gap-3 mx-auto shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+              className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] cursor-pointer  mx-auto rounded-xl font-bold  hover:shadow-xl transition-all duration-300"
+            ><Link target="_blank" className="text-xl flex items-center w-full justify-center gap-3 px-12 py-4 rounded-xl  shadow-lg" href="https://github.com/Nexoraedge/Text_Enhancer">
               <Sparkles className="w-6 h-6" />
-              Add to Chrome - It's Free
+              Try Extension now
               <ArrowRight className="w-6 h-6" />
+            </Link>
             </motion.button>
 
             <p className="text-[#8c8c8f] mt-4">No signup required • Works instantly • 30-day money-back guarantee</p>

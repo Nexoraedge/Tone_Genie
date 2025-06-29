@@ -124,23 +124,22 @@ export const extralinks = [
 ]
 export const socaillinks =[
   {
-    href:"#",
+    href:"https://github.com/Nexoraedge",
     icon:Github,
 
   },
   {
-    href:"#",
+    href:"https://x.com/DhoniAi",
     icon:X,
 
   },
-  {
-    href:"#",
-    icon:Linkedin,
+  // {
+  //   href:"https://linkedin.com/Nexoraedge",
+  //   icon:Linkedin,
 
-  },
+  // },
   {
-    href:"#",
+    href:"https://mailto:hardikjain2030@gmail.com",
     icon:Mail,
-
   },
 ]
