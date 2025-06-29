@@ -36,11 +36,28 @@ export default function FeedbackPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (!res.ok) {
+        throw new Error("Failed to send feedback")
+      }
+
+      setIsSubmitted(true)
+    } catch (error) {
+      alert(
+        "Sorry, there was a problem submitting your feedback. Please try again later."
+      )
+      console.error(error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -219,7 +236,7 @@ export default function FeedbackPage() {
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
-                    ✅ Share My Thoughts
+                    Share My Thoughts
                   </>
                 )}
               </motion.button>
@@ -236,18 +253,18 @@ export default function FeedbackPage() {
             <p className="text-[#9ca3af] mb-4">Need help right now?</p>
             <div className="flex justify-center gap-4">
               <a
-                href="hardikjain2030@gmial.com"
+                href="mailto:hardikjain2030@gmail.com"
                 className="flex items-center gap-2 px-4 py-2 bg-[#232336] border border-[#27272a] rounded-lg hover:bg-[#a78bfa]/20 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-               📨 Email Support
+               Email Support
               </a>
               <a
                 href="https://github.com/Nexoraedge"
                 className="flex items-center gap-2 px-4 py-2 bg-[#232336] border border-[#27272a] rounded-lg hover:bg-[#a78bfa]/20 transition-colors"
               >
                 <Github className="w-4 h-4" />
-                🐛GitHub Issues
+               GitHub Issues
               </a>
             </div>
           </motion.div>
