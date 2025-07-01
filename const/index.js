@@ -73,7 +73,7 @@ export const data = [
   {
     first:"CTRL",
     second:"SHIFT",
-    third:"G",
+    third:"U",
     smallD:"Quick Enhancement 🚀",
     extra:"Instantly improve grammer , style , tone and clarity",
     initial:-50
@@ -81,7 +81,7 @@ export const data = [
   {
     first:"CTRL",
     second:"SHIFT",
-    third:"O",
+    third:"Y",
     smallD:"Custom Tone ✒️",
     extra:"Choose specific tone, style preferences and provide context.",
 initial:50
@@ -96,9 +96,9 @@ initial:50
     initial:-50
   },
   {
-    first:"CTRL",
+    first:"Alt",
     second:"SHIFT",
-    third:"A",
+    third:"E",
     smallD:"Extension 🧩",
     extra:"From here you can go the extension , cheeck out our website and other features",
     initial:50
