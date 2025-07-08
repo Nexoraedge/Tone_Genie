@@ -20,7 +20,37 @@ function initFirebase() {
   }
 }
 
-// -------- API Route Handler ----------
+// -------- API Route Handlers ----------
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const minStarsParam = searchParams.get('minStars');
+    const minStars = minStarsParam ? Number(minStarsParam) : 4;
+
+    initFirebase();
+    const db = getFirestore();
+
+    // Firestore supports >= query on indexed fields. Ensure an index exists if needed.
+    const snapshot = await db
+      .collection('review')
+      .where('stars', '>=', minStars)
+      .orderBy('stars', 'desc')
+      .limit(25)
+      .get();
+
+    let reviews = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    // sort by createdAt desc on client side
+    reviews = reviews.sort((a: any, b: any) => (b.createdAt ?? '').localeCompare(a.createdAt ?? ''));
+
+    return NextResponse.json({ reviews }, { status: 200 });
+  } catch (err: any) {
+    console.error('[review API] GET Error:', err);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+
+// -------- POST handler ----------
 export async function POST(request: NextRequest) {
   try {
     // Parse JSON body
