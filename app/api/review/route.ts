@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cert, getApps, initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+// lib/cors.ts
+import { withCors } from '@/lib/cors';
 
 // -------- Firebase Admin Initialise ----------
 function initFirebase() {
@@ -43,10 +45,10 @@ export async function GET(request: NextRequest) {
     // sort by createdAt desc on client side
     reviews = reviews.sort((a: any, b: any) => (b.createdAt ?? '').localeCompare(a.createdAt ?? ''));
 
-    return NextResponse.json({ reviews }, { status: 200 });
+    return withCors(NextResponse.json({ reviews }, { status: 200 }));
   } catch (err: any) {
     console.error('[review API] GET Error:', err);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Internal Server Error' }, { status: 500 }));
   }
 }
 
@@ -65,11 +67,11 @@ export async function POST(request: NextRequest) {
     };
 
     if (typeof stars !== 'number' || stars < 1 || stars > 5) {
-      return NextResponse.json({ error: 'Invalid "stars" – must be 1-5' }, { status: 400 });
+      return withCors(NextResponse.json({ error: 'Invalid "stars" – must be 1-5' }, { status: 400 }));
     }
 
     if (!comment || typeof comment !== 'string') {
-      return NextResponse.json({ error: 'Invalid "comment"' }, { status: 400 });
+      return withCors(NextResponse.json({ error: 'Invalid "comment"' }, { status: 400 }));
     }
 
     // Initialise Firebase and get Firestore instance
@@ -85,9 +87,9 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString()
     });
 
-    return NextResponse.json({ id: docRef.id }, { status: 201 });
+    return withCors(NextResponse.json({ id: docRef.id }, { status: 201 }));
   } catch (err: any) {
     console.error('[review API] Error:', err);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Internal Server Error' }, { status: 500 }));
   }
 }

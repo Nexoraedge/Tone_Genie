@@ -2,6 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cert, getApps, initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+import { withCors } from '@/lib/cors';
 
 // ---------- Firebase Admin initialise (reuse for all routes) ----------
 function initFirebase() {
@@ -34,10 +35,10 @@ export async function POST(req: NextRequest) {
 
     // Basic validation
     if (!uid || !name || !email) {
-      return NextResponse.json(
+      return withCors(NextResponse.json(
         { error: 'uid, name and email are required' },
         { status: 400 }
-      );
+      ));
     }
 
     initFirebase();
@@ -55,9 +56,9 @@ export async function POST(req: NextRequest) {
       { merge: true } // updates if the doc already exists
     );
 
-    return NextResponse.json({ ok: true }, { status: 201 });
+    return withCors(NextResponse.json({ ok: true }, { status: 201 }));
   } catch (err: any) {
     console.error('[user API] Error:', err);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Internal Server Error' }, { status: 500 }));
   }
 }
