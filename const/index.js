@@ -29,7 +29,7 @@ export const icons = [
               {
                 icon: Keyboard,
                 title: "Press Shortcut",
-                description: "Use CTRL + SHIFT + G to enhance or CTRL + SHIFT + O to customize tone",
+                description: "Use CTRL + SHIFT + U to enhance or CTRL + SHIFT + Y to customize tone",
               },
               {
                 icon: Sparkles,
