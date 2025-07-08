@@ -39,36 +39,36 @@ const staggerContainer = {
 }
 
 export default function LandingPage() {
-  const [reviews, setReviews] = useState<any[]>([]);
+  const [feedback, setFeedback] = useState<any[]>([]);
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
 
 
 
-  const displayReviews = reviews.length ? reviews : testimonials;
+  const displayFeedback = feedback.length ? feedback : testimonials;
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % displayReviews.length)
+    setCurrentTestimonial((prev) => (prev + 1) % displayFeedback.length)
   }
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + displayReviews.length) % displayReviews.length)
+    setCurrentTestimonial((prev) => (prev - 1 + displayFeedback.length) % displayFeedback.length)
   }
 
   // auto-cycle testimonial every 5 s
   useEffect(() => {
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
-  }, [displayReviews.length]);
+  }, [displayFeedback.length]);
 
-  // fetch reviews once on mount
+  // fetch feedback once on mount
   useEffect(() => {
-    fetch('/api/review?minStars=4')
+    fetch('/api/feedback?minRating=4')
       .then((res) => res.json())
       .then((data) => {
-        if (Array.isArray(data.reviews) && data.reviews.length) {
-          setReviews(data.reviews as any[]);
+        if (Array.isArray(data.feedback) && data.feedback.length) {
+          setFeedback(data.feedback as any[]);
           setCurrentTestimonial(0);
         }
       })
@@ -446,12 +446,12 @@ export default function LandingPage() {
               className="bg-gradient-to-br from-[#232336] to-[#131316] rounded-2xl p-8 border border-[#27272a] text-center"
             >
               <div className="flex justify-center mb-4">
-                {[...Array(displayReviews[currentTestimonial]?.stars || displayReviews[currentTestimonial]?.rating || 0)].map((_, i) => (
+                {[...Array(displayFeedback[currentTestimonial]?.stars || displayFeedback[currentTestimonial]?.rating || 0)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-xl mb-6 italic">"{displayReviews[currentTestimonial].comment || displayReviews[currentTestimonial].content}"</p>
-              <h4 className="font-semibold text-lg text-[#9ca3af]">{displayReviews[currentTestimonial].role || ''}</h4>
+              <p className="text-xl mb-6 italic">"{displayFeedback[currentTestimonial].comment || displayFeedback[currentTestimonial].content}"</p>
+              <h4 className="font-semibold text-lg text-[#9ca3af]">{displayFeedback[currentTestimonial].role || ''}</h4>
             </motion.div>
 
             <button
@@ -469,7 +469,7 @@ export default function LandingPage() {
           </div>
 
           <div className="flex justify-center mt-6 gap-2">
-            {displayReviews.map((_, index) => (
+            {displayFeedback.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}

@@ -11,6 +11,29 @@ import { db } from "@/lib/firebaseAdmin";
  */
 export const runtime = "nodejs"; // Firestore requires Node runtime
 
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const minRatingParam = searchParams.get("minRating");
+    const minRating = minRatingParam ? Number(minRatingParam) : 4;
+
+    const snapshot = await db
+      .collection("feedback")
+      .where("rating", ">=", minRating)
+      .orderBy("rating", "desc")
+      .limit(25)
+      .get();
+
+    let feedback = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    feedback = feedback.sort((a: any, b: any) => (b.createdAt ?? 0) - (a.createdAt ?? 0));
+
+    return NextResponse.json({ feedback }, { status: 200 });
+  } catch (err: any) {
+    console.error("[feedback API] GET Error:", err);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const { name, love, improve, features, rating } = await request.json();

@@ -32,7 +32,7 @@ export default function LoginPage() {
         <button
           onClick={() => loginWithProvider("google")}
           disabled={loadingProvider !== null}
-          className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-full font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+          className="w-full flex cursor-pointer items-center justify-center gap-3 bg-white text-black py-3 rounded-full font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
         >
           {loadingProvider === "google" ? (
             <span className="animate-spin h-5 w-5 border-2 border-black border-t-transparent rounded-full" />
@@ -45,7 +45,7 @@ export default function LoginPage() {
         <button
           onClick={() => loginWithProvider("github")}
           disabled={loadingProvider !== null}
-          className="w-full flex items-center justify-center gap-3 bg-[#232336] border border-[#2e2e34] py-3 rounded-full font-medium hover:bg-[#2d2d3a] transition-colors disabled:opacity-50"
+          className="w-full flex cursor-pointer items-center justify-center gap-3 bg-[#232336] border border-[#2e2e34] py-3 rounded-full font-medium hover:bg-[#2d2d3a] transition-colors disabled:opacity-50"
         >
           {loadingProvider === "github" ? (
             <span className="animate-spin h-5 w-5 border-2 border-[#f3f4f6] border-t-transparent rounded-full" />
