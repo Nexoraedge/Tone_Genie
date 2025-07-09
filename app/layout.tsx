@@ -13,10 +13,49 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ToneGenie | AI-Powered Text Enhancer & Rewriter Tool",
-  description: "Transform your writing with ToneGenie's AI text enhancement. Instantly improve, rewrite, and optimize content for emails, social media, academic papers, and creative writing. Free online text editor with AI assistance.",
-  keywords: ["AI text enhancer", "rewrite text online", "AI writing assistant", "text improvement tool", "content rewriter", "academic writing help", "professional writing", "social media content generator", "creative writing assistant"],
+  title: "ToneGenie | AI-Powered Text Enhancer & Smart Rewriting Tool",
+  description:
+    "Enhance your writing with ToneGenie—your smart AI assistant to rewrite, refine, and perfect content for emails, social posts, freelance proposals, academic writing, and more.",
+  keywords: [
+    "AI text enhancer",
+    "rewrite text online",
+    "AI writing assistant",
+    "text rewriter tool",
+    "writing improvement tool",
+    "freelance writing help",
+    "email content generator",
+    "academic writing assistant",
+    "tone changer",
+    "content creator tools",
+    "AI productivity tools",
+    "AI text rewriter"
+  ],
+  openGraph: {
+    title: "ToneGenie | Instantly Enhance and Rewrite Any Text",
+    description: "ToneGenie is your AI-powered writing partner that helps you rewrite, enhance, and transform text instantly. Whether you're writing emails, social media captions, product descriptions, or professional messages — ToneGenie improves tone, clarity, and creativity in seconds. Perfect for freelancers, creators, and marketers looking to boost impact without the burnout.",
+    url: "https://tone-genie.vercel.app", // Replace with your actual domain
+    siteName: "ToneGenie",
+    images: [
+      {
+        url: "https://tone-genie.vercel.app/cover.png", // recommended Open Graph image (1200x630)
+        width: 1200,
+        height: 630,
+        alt: "ToneGenie - AI Writing Assistant",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ToneGenie | Enhance & Rewrite Text with AI",
+    description:
+      "Need better writing? ToneGenie is your AI-powered text enhancer—rewrite content with the perfect tone for any platform. Free to use!",
+    images: ["https://tone-genie.vercel.app/cover.png"], // same as above
+    creator: "@DhoniAi", // optional, your X (Twitter) handle
+  },
 };
+
 
 export default function RootLayout({
   children,
