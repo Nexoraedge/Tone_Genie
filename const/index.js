@@ -1,4 +1,4 @@
-import { MousePointer , Keyboard ,CheckCircle,Wand2,Users,Globe, Sparkles, Github, X, Linkedin, Mail } from "lucide-react"
+import { MousePointer , Keyboard ,CheckCircle,Wand2,Users,Globe, Sparkles, Github, X,  Mail , BookUser } from "lucide-react"
 export const testimonials = [
   {
     name: "Hardik Jain",
@@ -118,7 +118,7 @@ export const extralinks = [
     text:"Terms"
   },
   {
-    href:"/",
+    href:"https://3-d-react-protfolio.vercel.app/",
     text:"Contact"
   },
 ]
@@ -133,11 +133,11 @@ export const socaillinks =[
     icon:X,
 
   },
-  // {
-  //   href:"https://linkedin.com/Nexoraedge",
-  //   icon:Linkedin,
+  {
+    href:"https://3-d-react-protfolio.vercel.app/",
+    icon:BookUser,
 
-  // },
+  },
   {
     href:"https://mailto:hardikjain2030@gmail.com",
     icon:Mail,
