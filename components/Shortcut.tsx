@@ -27,7 +27,7 @@ const Shortcut = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-gradient-to-br from-[#232336] to-[#131316] rounded-2xl p-8 border border-[#27272a]"
+                className="bg-gradient-to-br from-[#232336] to-[#131316] rounded-2xl p-8 border hover:border-[#b28fe7d0] transition-all ease-in-out  border-[#27272a]"
               >
                 <div className="flex items-center justify-center mb-6">
                   <div className="flex gap-2">

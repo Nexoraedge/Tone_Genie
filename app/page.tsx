@@ -28,6 +28,7 @@ import How_it_works from "@/components/How_it_works"
 import Shortcut from "@/components/Shortcut"
 import Features from "@/components/Features"
 import Who_is_it_for from "@/components/Who_is_it_for"
+import SmoothScroll from "@/components/SmoothScroll"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -81,6 +82,7 @@ export default function LandingPage() {
   }, []);
 
   return (
+    <SmoothScroll>
     <div className="min-h-screen py-5 px-2  text-[#f3f4f6] overflow-hidden">
       {/* Hero Section */}
     <Hero />
@@ -167,6 +169,7 @@ export default function LandingPage() {
 
       {/* Final CTA Section */}
       <section className="py-20 px-4 relative">
+      <div className="purple-glow"></div>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -240,5 +243,6 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
+    </SmoothScroll>
   )
 }

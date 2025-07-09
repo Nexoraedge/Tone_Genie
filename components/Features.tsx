@@ -50,13 +50,16 @@ const Features = () => {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-gradient-to-br from-[#232336] to-[#131316] rounded-2xl p-6 border border-[#27272a] shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-[#7e7ef56f] via-[#050505] to-[#8628f9a2] rounded-2xl p-6 border border-[#27272a] shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-[#9029e4] to-[#a78bfa] rounded-xl flex items-center justify-center mb-4">
+                
+
+                <div className="w-12 h-12 bg-gradient-to-r from-[#232336] to-[#131316] rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 [#f3f4f6]" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-[#9ca3af] text-sm leading-relaxed">{feature.description}</p>
+               
               </motion.div>
             ))}
           </motion.div>

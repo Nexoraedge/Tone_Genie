@@ -23,8 +23,8 @@ export const testimonials = [
 export const icons = [
               {
                 icon: MousePointer,
-                title: "Select Text",
-                description: "Highlight any text on any website - emails, social media, documents, anywhere!",
+                title: "Select Input",
+                description: "Click the input field where you want to enhance existing text or compose new content from scratch",
               },
               {
                 icon: Keyboard,

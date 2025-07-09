@@ -2,6 +2,19 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Default cursor for everything */
+* {
+  cursor: url('/cur2.png') , auto;
+}
+
+/* Pointer cursor for interactive elements */
+a, button, input[type="button"], input[type="submit"], [role="button"], .cursor-pointer {
+  cursor: url('/cursor_45.png') 20 20, pointer;
+}
 
 @layer utilities {
   .no-scrollbar {
@@ -15,6 +28,7 @@
     @apply flex items-center justify-center;
   }
 }
+
 @layer components{
   h1{
     @apply text-3xl lg:text-5xl xl:text-6xl md:text-4xl font-bold
@@ -186,7 +200,7 @@ body {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(171, 110, 227, 0.35) 0%, rgba(130, 71, 233, 0.2) 50%, transparent 100%);
+  background: radial-gradient(circle, rgba(179, 68, 231, 0.503) 0%, rgba(62, 0, 170, 0.662) 50%, transparent 100%);
   filter: blur(140px);
   opacity: 0.7;
   animation: glowPulse 8s cubic-bezier(0.4,0,0.6,1) infinite;
