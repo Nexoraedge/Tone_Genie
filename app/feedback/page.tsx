@@ -100,7 +100,7 @@
     }
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#18181b] via-[#131316] to-[#18181b] text-[#f3f4f6]">
+      <div className="min-h-screen bg-gradient-to-t from-[#7c17f87c] via-[#0f0118] to-[#7878dcb6] text-[#f3f4f6]">
         {/* Animated Background */}
         <div className="fixed inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-[#a78bfa]/10 via-transparent to-[#9029e4]/10" />

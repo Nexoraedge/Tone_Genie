@@ -13,12 +13,13 @@ export default function PrivacyPolicyPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-5 text-[#f3f4f6]">
+    <div className="min-h-screen flex  flex-col items-center justify-center px-4 py-5 text-[#f3f4f6]">
+      <div className="purple-glow"></div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-3xl p-6 sm:p-10 no-scrollbar rounded-2xl border border-purple-500/40 bg-purple-950/30 bg-clip-padding backdrop-blur-xl shadow-2xl md:max-h-[80vh] md:overflow-y-auto"
+        className="w-full max-w-3xl p-6 sm:p-10 no-scrollbar rounded-2xl border border-purple-500/40  bg-clip-padding backdrop-blur-xl shadow-2xl md:max-h-[80vh] md:overflow-y-auto"
       >
         <h1 className="text-4xl font-bold mb-2 text-center bg-gradient-to-r from-[#c693f0] via-[#9029e4] to-[#baa7f1] bg-clip-text text-transparent">
           ToneGenie AI — Privacy Policy

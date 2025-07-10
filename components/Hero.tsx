@@ -61,7 +61,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r cursor-pointer from-[#9029e4] to-[#a78bfa]  rounded-xl font-semibold text-lg  shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <Link href="https://github.com/Nexoraedge/Text_Enhancer" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
+            <Link href="https://github.com/Nexoraedge/Text_Enhancer?tab=readme-ov-file#-quick-install" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
             <Sparkles className="w-5 h-5" />
             Try Now !!
             <ArrowRight className="w-5 h-5" />
@@ -71,9 +71,13 @@ const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="border cursor-pointer border-[#27272a] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#232336] transition-all duration-300"
+            className="bg-gradient-to-l cursor-pointer from-[#2f2e2f] via-[#767676] to-[#2f2e2f] border border-[#27272a]  rounded-xl font-semibold text-lg hover:bg-[#232336] transition-all duration-300"
           >
-            Watch Demo
+           <Link href="https://youtube.com/shorts/zpJMzjUm6hs?si=S0HiPOcsWRBEw9ld" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
+           
+           Watch Demo
+           
+           </Link>
           </motion.button>
         </motion.div>
 
