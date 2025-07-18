@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { privacyPolicy } from "@/const";
+import { h2 } from "motion/react-client";
 
 export default function PrivacyPolicyPage() {
   const today = new Date();
@@ -27,35 +29,21 @@ export default function PrivacyPolicyPage() {
         <p className="text-center text-sm text-[#9ca3af] mb-8">Effective Date: {formatted}</p>
 
         <div className="space-y-6 leading-relaxed text-lg">
-          <section>
-            <h2 className="font-semibold text-2xl mb-2">1. Data Collection</h2>
-            <p> ToneGenie AI does <strong>not</strong> collect personal data, browsing history, or any identifiable information. All processing happens locally within your browser.</p>
-          </section>
+          {
+            privacyPolicy.map((e , index) =>(
 
           <section>
-            <h2 className="font-semibold text-2xl mb-2">2. Permissions</h2>
-            <p>The extension needs permission to read the text you select and replace it with AI-generated enhancements. ToneGenie never tracks your activity or stores your input.</p>
+            <h2 className="font-semibold text-2xl mb-2">{e.title}</h2>
+            <p>{e.content}</p>
           </section>
+            ) )
+          }
 
           <section>
-            <h2 className="font-semibold text-2xl mb-2">3. Third-Party APIs</h2>
-            <p>We securely call AI providers (e.g., OpenAI, Gemini) to generate rewritten text. No personally identifiable information is sent to these services.</p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-2xl mb-2">4. Cookies</h2>
-            <p>ToneGenie AI does not use cookies.</p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-2xl mb-2">5. Updates</h2>
-            <p>If we update this policy, we will announce it on the Chrome Web Store listing.</p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-2xl mb-2">6. Contact Us</h2>
+            <h2 className="font-semibold text-2xl mb-2">8. Contact Us</h2>
             <p>If you have any questions, please email us at <a href="mailto:hardikjain2030@gmail.com" className="text-[#c693f0] underline">hardikjain2030@gmail.com</a>.</p>
           </section>
+
         </div>
 
       </motion.div>

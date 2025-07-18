@@ -20,6 +20,46 @@ export const testimonials = [
   },
 ]
 
+export const privacyPolicy = [
+  {
+    title: "1. Data Collection",
+    content:
+      "ToneGenie AI does not collect, store, or transmit any personal data, user credentials, browsing history, or identifiable information. All interactions and text processing occur locally in your browser. We do not log or analyze user input."
+  },
+  {
+    title: "2. Permissions",
+    content:
+      "The extension requests permission to read and modify selected text on webpages to enhance it with AI. This is only activated when the user explicitly selects text and triggers the extension (e.g., via keyboard shortcut or popup). ToneGenie never tracks or monitors background activity."
+  },
+  {
+    title: "3. AI Processing and Third-Party APIs",
+    content:
+      "To rewrite selected text, ToneGenie securely communicates with trusted third-party AI providers such as OpenAI and Gemini. Only the selected text is sent, without any metadata, personal data, cookies, or webpage context. These API calls are encrypted and stateless."
+  },
+  {
+    title: "4. Cookies and Tracking",
+    content:
+      "ToneGenie AI does not use cookies, tracking pixels, or any analytics tools. Your usage is entirely anonymous and private."
+  },
+  {
+    title: "5. Local Execution & Chrome Manifest V3",
+    content:
+      "ToneGenie is built using Chrome's Manifest V3 architecture. It runs entirely in the browser environment and does not include any persistent background scripts. This ensures better security, performance, and user control."
+  },
+  {
+    title: "6. User Control",
+    content:
+      "The extension only activates when you interact with it. You can uninstall ToneGenie at any time, and no data will remain on your system after removal."
+  },
+  {
+    title: "7. Policy Updates",
+    content:
+      "Any updates to this privacy policy will be clearly communicated on the Chrome Web Store listing and our official website. We are committed to transparency and respecting your privacy rights."
+  },
+  
+];
+
+
 export const icons = [
               {
                 icon: MousePointer,
