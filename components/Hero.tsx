@@ -61,7 +61,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r cursor-pointer from-[#9029e4] to-[#a78bfa]  rounded-xl font-semibold text-lg  shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <Link href="https://github.com/Nexoraedge/Text_Enhancer?tab=readme-ov-file#-quick-install" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
+            <Link href="https://chromewebstore.google.com/detail/ealfaploahagilehoegggemodolcgjfi?utm_source=item-share-cb" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
             <Sparkles className="w-5 h-5" />
             Try Now !!
             <ArrowRight className="w-5 h-5" />
