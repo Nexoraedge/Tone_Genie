@@ -12,6 +12,7 @@
     "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-slot": "^1.2.3",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebase": "^9.22.2",
