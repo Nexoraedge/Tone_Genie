@@ -191,7 +191,7 @@ export default function LandingPage() {
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(167, 139, 250, 0.4)" }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-[#9029e4] to-[#a78bfa] cursor-pointer  mx-auto rounded-xl font-bold  hover:shadow-xl transition-all duration-300"
-            ><Link target="_blank" className="text-xl flex items-center w-full justify-center gap-3 px-12 py-4 rounded-xl  shadow-lg" href="https://github/Nexoraedge/">
+            ><Link target="_blank" className="text-xl flex items-center w-full justify-center gap-3 px-12 py-4 rounded-xl  shadow-lg" href="https://chromewebstore.google.com/detail/text-enhancer-ai-powered/ealfaploahagilehoegggemodolcgjfi">
               <Sparkles className="w-6 h-6" />
               Try Extension now
               <ArrowRight className="w-6 h-6" />
