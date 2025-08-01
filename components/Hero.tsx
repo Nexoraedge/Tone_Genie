@@ -63,7 +63,7 @@ const Hero = () => {
           >
             <Link href="https://chromewebstore.google.com/detail/ealfaploahagilehoegggemodolcgjfi?utm_source=item-share-cb" className="text-xl flex items-center w-full justify-center gap-2 px-8 py-4 rounded-xl  shadow-lg" target="_blank">
             <Sparkles className="w-5 h-5" />
-            Try Now !!
+            Try Now !!  
             <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.button>

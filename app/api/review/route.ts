@@ -7,7 +7,7 @@ import { withCors } from '@/lib/cors';
 // -------- Firebase Admin Initialise ----------
 function initFirebase() {
   if (getApps().length === 0) {
-    const projectId = process.env.FIREBASE_PROJECT_ID;
+    const projectId = process.env.FIREBASE_PROJECT_ID;  
     const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
     // Replace escaped newlines in private key
     const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n');
@@ -57,7 +57,8 @@ export async function POST(request: NextRequest) {
   try {
     // Parse JSON body
     const body = await request.json();
-
+   console.log(body);
+   
     // Basic schema validation – ensure required fields exist
     const { stars, comment, extVersion, ua } = body as {
       stars: number;

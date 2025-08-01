@@ -36,7 +36,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const { name, love, improve, features, rating } = await request.json();
+    const { name, love, improve, features, rating, Id } = await request.json();
 
     // Basic validation – extend as needed
     if (!love && !improve && !features) {
@@ -46,6 +46,7 @@ export async function POST(request: Request) {
     // Save to Firestore
     await db.collection("feedback").add({
       name: name || "Anonymous",
+      Id,
       love,
       improve,
       features,
