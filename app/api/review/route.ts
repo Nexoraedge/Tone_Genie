@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
   try {
     // Parse JSON body
     const body = await request.json();
-   console.log(body);
+  //  console.log(body);
    
     // Basic schema validation – ensure required fields exist
     const { stars, comment, extVersion, ua } = body as {

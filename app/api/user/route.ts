@@ -63,23 +63,23 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export async function GET(id:string) {
-   try{
-     const uid = id;
-     initFirebase();
-     const db = getFirestore();
-     if (!uid) {
-       return withCors(NextResponse.json({ error: 'uid is required' }, { status: 400 }));
-     }
-     const docRef = db.collection('Users').doc(uid);
-     const docSnap = await docRef.get();
-     if (docSnap.exists) {
-       return withCors(NextResponse.json({ user: docSnap.data() }, { status: 200 }));
-     } else {
-       return withCors(NextResponse.json({ error: 'User not found' }, { status: 404 }));
-     }
-   }catch(err:any){
-    console.error("[user API] GET Error:", err);
-    return withCors(NextResponse.json({ error: 'Internal Server Error' }, { status: 500 }));
-   }
-  }
+// export async function GET(id:string) {
+//    try{
+//      const uid = id;
+//      initFirebase();
+//      const db = getFirestore();
+//      if (!uid) {
+//        return withCors(NextResponse.json({ error: 'uid is required' }, { status: 400 }));
+//      }
+//      const docRef = db.collection('Users').doc(uid);
+//      const docSnap = await docRef.get();
+//      if (docSnap.exists) {
+//        return withCors(NextResponse.json({ user: docSnap.data() }, { status: 200 }));
+//      } else {
+//        return withCors(NextResponse.json({ error: 'User not found' }, { status: 404 }));
+//      }
+//    }catch(err:any){
+//     console.error("[user API] GET Error:", err);
+//     return withCors(NextResponse.json({ error: 'Internal Server Error' }, { status: 500 }));
+//    }
+//   }
