@@ -74,13 +74,7 @@ npm run build
 - ✅ Gmail and other email clients
 - ✅ Any website with text inputs
 
-## 🔧 Configuration
 
-### API Configuration
-The extension uses a custom backend API:
-- **Endpoint**: `https://tone-genie.vercel.app/api/enhance/route.ts`
-- **Model**: Gemini 2.0 Flash
-- **Authentication**: Not required for MVP
 
 ### Customization
 - Keyboard shortcuts can be modified in `chrome://extensions/shortcuts`
